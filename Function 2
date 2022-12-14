@@ -1,0 +1,43 @@
+#include <iostream>
+#include <stdio.h>
+#include <windows.h>
+#include <conio.h>
+#include <math.h>
+#include <algorithm>
+#include <stdlib.h>
+#include <cstring>
+#include <iomanip>
+#include <cfloat>
+#include <ctime>
+
+using namespace std;
+
+
+
+
+
+int main()
+{
+    int i, k, j;
+    double L = 1, sum;
+
+    cout << "Enter k = ";
+    cin >> k;
+
+    for (j = 1; j <= k; j++)
+        if (j != 2)
+        {
+            sum = 0;
+            for (i = k; i <= 12; i++)
+                sum += sqrt(i + 5.) / (i - 1.);
+            L *= (j - 5.) / (j - 2.) + sum;
+
+        }
+
+    cout << "Multiplication: " << L;
+
+    cin.get(); cin.get();
+
+    system("pause");
+    return 0;
+}
